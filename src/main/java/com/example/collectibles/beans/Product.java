@@ -1,9 +1,12 @@
 package com.example.collectibles.beans;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Product {
     @Id
     private int id;
